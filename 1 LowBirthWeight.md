@@ -18,7 +18,7 @@
 ![reading Birtwt](/images/SASprogramReadData1.jpg)
 ### In the above program list, I included 'libname' statement on the top to create 'permanent' data library followed by 'data step'. In the data step, I use infile statement with 'dsd' option. With this, we don't have to worry about double quotation marks surrounding 'ID' item in the rawdata. Also, we must specify 'firstobs' option in order to skip the first row which contains field names. 
 ## 1-4.Inspection of input file  
-### After reading raw data, we must do some preparation works before doing analysis. The first thing we must do is the inspection of dataset. Because, to apply logistic regression, all the explanatory variables either 1) have continuous variables or 2) categorical variables with only two values(ex. male or female, pass or fail etc.) otherwise, we must include 'class' option in our model.
+### After reading raw data, we must do some preparation works before doing analysis. The first thing we must do is the inspection of dataset. Because, to apply logistic regression, all the explanatory variables either 1) have continuous variables or 2) are categorical variables with only two values(ex. male or female, pass or fail etc.) otherwise, we must include 'class' option in our model.
 ### So, we must know which data item have which values. In this case, 'Freq' procedure is quite effective and useful.
 ![freq procedure](/images/SASprocfreq.jpg)
 ### In the program list above, I used 'tables' option. With this, we can see the values of each variables independently.

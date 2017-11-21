@@ -23,5 +23,6 @@
 ![freq procedure](/images/SASprocfreq.jpg)
 ### In the program list above, I used 'tables' option. With this, we can see the values of each variables independently.
 ![result of freq procedure](/images/SASprocfreq2.jpg)
-
+### As you can see from the result above, 
+ 
   

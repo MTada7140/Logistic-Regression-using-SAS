@@ -10,9 +10,6 @@
 ![Log window](/images/binaryModel.jpg)
 ### In this case, logistic regression is quite effective. Ligistic regression enables you to estimate the model you need in this kind of model and still the result is easy to read. That means logistic regression gives you the 'acctionable' outcomes to you 
 ## 1-2.Getting the data
-### In this article, I'd like to use a 'real' data published on the web site. I found a monthly data of passengers from this site(http://new.censusatschool.org.nz/resource/time-series-data-sets-2013/).
-### The data is organised in the form of csv file and look like this.
-### As you can see, there are three columns contained and 154 records in total in this file to cover from January of 2000 to October of 2012. I am  going to read and create SAS data set for this file on the next section.
 ## 1-3.Reading the raw data from csv file
 ### To read the raw data from csv file we saw on the previous section, the first program I write and submitted is listed below.
 ### There are five program steps in this program. The first line specifies the name of output dataset with second line showing input file specification. Please note that there are two options added to 'infile' statement. One is 'dsd' which is used to read comma seperated file and another is 'firstobs' which is used to skip reading the first line which contains only the column headding. Submitting this one, I got the result below.

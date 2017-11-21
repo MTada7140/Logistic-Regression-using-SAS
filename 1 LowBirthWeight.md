@@ -14,7 +14,7 @@
 ## 1-3.Reading the raw data from csv file
 ### The downloaded file looks like this. 
 ![rawdata](/images/rawdata.jpg)
-### To read this raw data in csv format, we can use "dsd" option of SAS data step. And all the data items including numeric values, so reading the data is quite simple as follows. 
+### To read this raw data in csv format, we can use "dsd" option of SAS data step. And all the data items contain only numeric values, so reading the data is quite simple as follows. 
 ![reading Birtwt](/images/SASprogramReadData1.jpg)
 ### In the above program list, I included 'libname' statement on the top to create 'permanent' data library followed by 'data step'. In the data step, I use infile statement with 'dsd' option. With this, we don't have to worry about double quotation marks surrounding 'ID' item in the rawdata. Also, we must specify 'firstobs' option in order to skip the first row which contains field names. 
 ## 1-4.Inspection of input file  

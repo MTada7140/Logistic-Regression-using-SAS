@@ -1,7 +1,7 @@
 # 1.Analysis of "Low Birth Weight"
 
 ## 1-1.Introduction: "What is logistic regression?"
-###   As the simple regression or 'linear' regression deals with the estimation of models like 
+###   As the simple regression or 'linear' regression deals with the estimation of models like following:
  
 ![LinearModel](/images/linearModel.jpg)
 ### And try to find a set of parameters (a, b) in order to figure out a model which explains the data as correctly as possible. In this case, this model gives you a single line and it is easy to use the result of estimation in your field. But this is applicable for the models with variables with 'continuous' values as the target of estimation.

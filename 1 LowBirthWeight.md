@@ -4,17 +4,24 @@
 ###   As the simple regression or 'linear' regression deals with the estimation of models like 
  
 ![LinearModel](/images/linearModel.jpg)
-### And try to find a set of parameters (a, b) in order to figure out a model which explains the data as correctly as possible. In this case, this model gives you a single line and it is easy to use the result of estimation. But this is applicable for the models with 'continuous' variables as the target of estimation.
+### And try to find a set of parameters (a, b) in order to figure out a model which explains the data as correctly as possible. In this case, this model gives you a single line and it is easy to use the result of estimation in your field. But this is applicable for the models with variables with 'continuous' values as the target of estimation.
 ![Result window](/images/linearModel2.jpg)
 ### If you have problems like *'Will this customer buy product A?'* or *'Will this patient be cured?'*, you can not apply linear regression because the target variables only have two values ie. '1' for success and '0' for failure. 
 ![Log window](/images/binaryModel.jpg)
-### In this case, logistic regression is quite effective. Ligistic regression enables you to estimate the model you need in this kind of model and still the result is easy to read. That means logistic regression gives you the 'acctionable' outcomes to you 
+### In this case, logistic regression is quite effective. Ligistic regression enables you to estimate the model you need in this kind of model and still the result is easy to read. That means logistic regression gives you the 'acctionable' outcomes to you. Actually, logistic regression is a one of the most favorable analytical method in the field of marketing and medicine. 
 ## 1-2.Getting the data
+### In this article, I would like to use a data in the R library called "Risk Factors Associated with Low Infant Birth Weight". This contains 189 rows of data which collected at Baystate Medical Center in 1986. It can be downloaded from "https://github.com/vincentarelbundock/Rdatasets/tree/master/csv/MASS".
 ## 1-3.Reading the raw data from csv file
-### To read the raw data from csv file we saw on the previous section, the first program I write and submitted is listed below.
-### There are five program steps in this program. The first line specifies the name of output dataset with second line showing input file specification. Please note that there are two options added to 'infile' statement. One is 'dsd' which is used to read comma seperated file and another is 'firstobs' which is used to skip reading the first line which contains only the column headding. Submitting this one, I got the result below.
-### Seeing the result, three columns are read from input file, but there is one thing which is not good for further analysis. Because the date column(in this case named 'yymm') contains character 'M' between year and month. In SAS, this is not recognised as 'date' type information. In order to remove this problem, several codes must be added.
-### Looking at this code, you will find three lines are added in order to make up date type column of SAS(line 5 to 7). The first two lines added for extracting numbers of year and month from originad 'Date' column and the third line is aded to form date type column using 'mdy' function. Submitting this program, the final data set is created as shown below.
-### From the next chapter, I will show you the steps of time series analysis using this dateset. 
+### The downloaded file looks like this. 
+![rawdata](/images/rawdata.jpg)
+###To read this raw data in csv format, we can use "dsd" option of SAS data step. And all the data items including numeric values, so reading the data is quite simple as follows. 
+![reading Birtwt](/images/SASprogramReadData1.jpg)
+### In the above program list, I included 'libname' statement on the top to create 'permanent' data library followed by 'data step'. In the data step, infile statement with 'dsd' option, we don't have to worry about double quotation marks surrounding 'ID' item. Also, we must specify 'firstobs' option in order to skip the first row which contains field names. 
+## 1-4.Inspection of input file  
+### After reading raw data, we must do some preparation works before doing analysis. The first thing we must do is the inspection of dataset. Because, to apply logistic regression, all the explanatory variables either 1) have continuous variables or 2) categorical variables with only two values(ex. male or female, pass or fail etc.) otherwise, we must include 'class' option in our model.
+### So, we must know which data item have which values. In this case, 'Freq' procedure is quite effective and useful.
+![freq procedure](/images/SASprocfreq.jpg)
+### In the program list above, I used 'tables' option. With this, we can see the values of each variables independently.
+![result of freq procedure](/images/SASprocfreq2.jpg)
 
   

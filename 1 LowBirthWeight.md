@@ -24,11 +24,11 @@
 ### In the program list above, I used 'tables' option. With this, we can see the values of each variables as separate tables.
 ![result of freq procedure](/images/SASprocfreq2.jpg)
 ### As show in the tables above, we now see the range of the variables in our dataset. The variables named 'race' has three values, 'ptl' has four and 'ftv' has seven values. Before we headding to building our model, let's see the meaning of variables from the explanatory document.
-> name of variable | explanation
-> ----------------|---------------- 
-> **race** | mother's race (1 = white, 2 = black, 3 = other).
-> **ptl** | number of previous premature labours.
-> **ftv** | number of physician visits during the first trimester.
+ name of variable | explanation
+ ----------------|---------------- 
+ **race** | mother's race (1 = white, 2 = black, 3 = other).
+ **ptl** | number of previous premature labours.
+ **ftv** | number of physician visits during the first trimester.
 ### Seeing from the explanation above, the variable 'race' can be used as it is, but for 'ptl' and 'ftv', we must change the values of these ones in order to show only two states, ie. 'yes' and 'no'.
 ### I wrote the following data step code to do this;
 

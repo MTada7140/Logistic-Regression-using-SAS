@@ -30,7 +30,22 @@
 ## 2-4.Analysis using logistic regression
 ### After we finished the preparation of data, we can proceed to the analysis step. The code I wrote is basically same as the one of the previous section. I chose the stepwise method in this case also and put class statement to specify categorical variables.
 
+![logistic code](/images/SASproclogistic3.jpg)
 
+### Running this code, we can get the similar output as previous section.
 
+![logistic output1](/images/SASproclogistic31.jpg)
+
+### Also we can get the table showing statistical significance of each variables as following.
+
+![logistic output1](/images/SASproclogistic32.jpg)
+
+### This case, SAS followed the stepwise process down to step eight and finally get this odd's estimation.
  
+![logistic output1](/images/SASproclogistic33.jpg)
+
+### Seeing from the table above, marriage and buying house make a person reluctant to buy an expensive bike. And we get the final model estimation and 'prediction' of buying probability for all the customers as following. 
+![logistic output1](/images/SASproclogistic34.jpg)
+
+![logistic output1](/images/SASproclogistic35.jpg)
 

@@ -16,3 +16,14 @@
 ## 2-3.Reding of Sales data and merging  
 ### Before we can do the logistic regression, there is another thing we must do. Since we are going to anlyse future purchase behaviour from past behavioural data, we must read sales data and merge it to customer data. So first of all, let's have alook at the sales data;
 ![result Dataset](/images/SASprocprint3.jpg)
+### Seeing the sales data above, we can recognize the key to customer data(field name is "customerKey"). So the task is compress the rows of saels data by customer key field and then merge with the customer table.
+### I wrote the following code to read, sort and compress dataset by customerKey. 
+![datastep](/images/SASdatastep1.jpg)
+### The last data step for compressing data is a little bit tricky, once if you sort a dataset with the key variable, you can use 'first' and 'last' automatic variables in the datastep. In my case, 'if first.CustomerKey' means the time when SAS read the next CustomerKey and 'if last.CustomerKey' means the time just before the next CustomerKey value. And I put the initialisation of total variable on the former one and output statement on the latter. That make up the typical program of key compression in SAS. Other than 'first' and 'last', SAS has a lot of automatic variables you can use.
+### After the compression, next step is merging. It's a lit;le bit easier.
+![datastep](/images/SASdatastep2.jpg)
+### As you can see above, just set two datasets to merge and specify your merging key.
+
+
+ 
+

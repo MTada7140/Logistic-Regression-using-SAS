@@ -1,7 +1,7 @@
 # 2.Analysis of "Will He(She) Buy an Expensive Bike?"
 
 ## 2-1.Introduction and the data
-### Another appropriate field of applying logistic regression is 'marketing'. In tis section, I'd like to show an example of analysis on purchasing probability. The data I am using in this section is sample data provided by Microsoft corporation. It is a set of data regarding a bike manufacturer called 'Adventure Works'. It is quite useful for this kind of analysis because the data contains all data table required for retail/manufacturing analysis including sales, customer, employee, product, manufacturing and so on. This data can be downloaded from "https://msftdbprodsamples.codeplex.com/releases/view/125550" and I chose "Adventure Works 2014 Warehouse Script".
+### Another appropriate field of applying logistic regression is 'marketing'. In tis section, I'd like to show an example of analysis on purchasing probability. The data I am using in this section is sample data provided by Microsoft corporation. It is a set of data regarding a bike manufacturer called 'Adventure Works'. It is quite useful for this kind of analysis because the data contains all data table required for retail/manufacturing analysis including sales, customer, employee, product, manufacturing, cost and so on. This data can be downloaded from "https://msftdbprodsamples.codeplex.com/releases/view/125550" and I chose "Adventure Works 2014 Warehouse Script".
 ### I set the purpose of analysis using data as estimation of purchasing probability for expensive bikes.
  
 ## 2-2.Reading the raw data from 'csv' file 
@@ -24,6 +24,8 @@
 ![datastep](/images/SASdatastep2.jpg)
 ### As you can see above, just set two datasets to merge and specify your merging key. With these steps above we got dataset with customer attributes and sales figures combined. The last step is setting of the target value; ie. bought or didn't buy an expensive bike. It is also done by merging with sales data. But this case sales data must be limited to the sales data of expensive bikes only. Data steps required are quite similar to the previous ones.
 ![datastep](/images/SASdatastep3.jpg)
+### Finally we get dataset as following with data steps above. 
+![result Dataset4](/images/SASprocprint4.jpg)
 
 ## 2-4.Analysis using logistic regression
 ### After we finished the preparation of data, we can proceed to the analysis step. The code I wrote is basically same as the one of the previous section. I chose the stepwise method in this case also and put class statement to specify categorical variables.
